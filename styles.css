@@ -1,0 +1,264 @@
+/* Dark theme base */
+body {
+  margin: 0;
+  font-family: 'Tahoma', sans-serif;
+  background-color: #121618;  /* dark background */
+  color: #e0e0e0; /* light text */
+  display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background-color: #013532;  /* darker teal */
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.9);
+  overflow-y: auto;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.sidebar-header-buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.sidebar-header h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #a0f1d1;
+}
+
+.sidebar h2 {
+  color: #7de6bf; /* lighter green */
+  font-size: 20px;
+  margin: 0;
+  transition: opacity 0.3s ease;
+  flex-grow: 1;
+}
+
+.sidebar.collapsed h2 {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.toggle-btn, .hide-btn {
+  background-color: #04967f; /* teal accent */
+  color: white;
+  border: none;
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.toggle-btn:hover, .hide-btn:hover {
+  background-color: #036654;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar li a {
+  text-decoration: none;
+  color: #a0f1d1;
+  font-weight: bold;
+  display: inline-block;
+  transition: font-size 0.3s, opacity 0.3s;
+  cursor: pointer;
+}
+
+.sidebar.collapsed li a {
+  font-size: 0;
+  opacity: 0;
+}
+
+/* Main content */
+.main-content {
+  margin-left: 280px;
+  padding: 30px;
+  flex-grow: 1;
+  background-color: #1e2729; /* dark slate background */
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  background-image: url('pic.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main-content.expanded {
+  margin-left: 80px;
+}
+
+/* Page containers */
+.page {
+  display: none;
+  background: #2c3e40; /* dark card background */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+  max-width: 900px;
+  margin: auto;
+  color: #e0e0e0;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Headings */
+h1, h2 {
+  color: #38d39f; /* bright teal */
+}
+
+/* Paragraph */
+p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #c0d9d5;
+}
+
+/* Vision logo */
+.site-logo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.vision-logo {
+  max-width: 180px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  filter: brightness(0.95);
+}
+
+/* Video container */
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin-top: 20px;
+}
+
+.video-container iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: brightness(0.9);
+}
+
+/* Buttons */
+.continue-btn {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+  background-color: #38d39f;
+  color: #121618;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(56, 211, 159, 0.6);
+}
+
+.continue-btn:hover {
+  background-color: #2bb68b;
+}
+
+/* Quote section */
+.quote-section {
+  background-color: #144338;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: inset 0 0 10px #0a261d;
+}
+
+.quote-text {
+  font-size: 22px;
+  font-weight: bold;
+  color: #81e7c7;
+  font-style: italic;
+}
+
+.quote-source {
+  font-size: 16px;
+  color: #a3c7b6;
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* Lists */
+ul {
+  padding-left: 20px;
+  color: #b0d7d0;
+}
+
+/* Form styles for quiz */
+form p {
+  font-weight: bold;
+  color: #7fffd4;
+  margin-bottom: 10px;
+}
+
+form label {
+  color: #b0d7d0;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #38d39f;
+  cursor: pointer;
+}
+
+/* Leaflet map container style */
+#ksa-map {
+  height: 600px;
+  max-width: 900px;
+  margin: 30px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+} 

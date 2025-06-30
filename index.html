@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saudi Vision 2030</title>
+
+  <!-- Leaflet CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-header-buttons">
+        <button class="toggle-btn" onclick="toggleSidebar()" id="lockBtn" title="Toggle Menu">��</button>
+        <button class="hide-btn" onclick="toggleMenuItems()" id="hideBtn" title="Hide/Show Menu Items">Hide Others</button>
+      </div>
+      <h2>Course Menu</h2>
+    </div>
+    <ul id="menuList">
+      <li><a onclick="showPage(1)">Introduction</a></li>
+      <li><a onclick="showPage(2)">Vision 2030 Goals</a></li>
+      <li><a onclick="showPage(3)">Vision Pillars</a></li>
+      <li><a onclick="showPage(4)">Realization Programs</a></li>
+      <li><a onclick="showPage(5)">Mega Projects</a></li>
+      <li><a onclick="showPage(6)">Education</a></li>
+      <li><a onclick="showPage(7)">Sustainability</a></li>
+      <li><a onclick="showPage(8)">Healthcare</a></li>
+      <li><a onclick="showPage(9)">Digital Transformation</a></li>
+      <li><a onclick="showPage(10)">Culture and Entertainment</a></li>
+      <li><a onclick="showPage(11)">Renewable Energy</a></li>
+      <li><a onclick="showPage(12)">Quiz</a></li>
+      <li><a onclick="showPage(13)">Generation Systems Map</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content" id="mainContent">
+
+    <div class="page active" id="page1">
+      <h1>Saudi Vision 2030</h1>
+      <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
+      <div class="quote-section">
+        <p class="quote-text">❝ My primary goal is to be an exemplary and leading nation in all aspects, and I will work with you in achieving this endeavour. ❞</p>
+        <p class="quote-source">— Custodian of the Two Holy Mosques, King Salman Bin Abdulaziz Al-Saud</p>
+      </div>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/zzHuWw7mu0c?autoplay=1" allow="autoplay" allowfullscreen></iframe>
+      </div>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page2">
+      <h2>Vision 2030 Goals</h2>
+      <p>Saudi Arabia's Vision 2030 outlines a strategic roadmap to transform the Kingdom into a global model of excellence. The goals are divided into social, economic, and governmental priorities, each supporting national development and long-term sustainability.</p>
+      <div class="vision-goal">
+        <h3>Economic Diversification</h3>
+        <p><b>Objective:</b> Reduce dependence on oil revenues.</p>
+        <ul>
+          <li>Develop non-oil sectors such as tourism, entertainment, mining, manufacturing, and logistics.</li>
+          <li>Invest in renewable energy and technology.</li>
+          <li>Encourage private sector growth and entrepreneurship.</li>
+        </ul>
+      </div>
+      <div class="vision-goal">
+        <h3>Empowering Citizens</h3>
+        <p><b>Objective:</b> Build a productive and inclusive society.</p>
+        <ul>
+          <li>Increase women's participation in the workforce and leadership roles.</li>
+          <li>Expand training programs and scholarships for youth.</li>
+          <li>Promote volunteering and social responsibility.</li>
+        </ul>
+      </div>
+      <div class="vision-goal">
+        <h3>Enhancing Quality of Life</h3>
+        <p><b>Objective:</b> Make Saudi Arabia one of the best places to live.</p>
+        <ul>
+          <li>Improve public health services and facilities.</li>
+          <li>Upgrade education systems with modern technology and curricula.</li>
+          <li>Expand cultural, recreational, and sports programs.</li>
+        </ul>
+      </div>
+      <div class="vision-goal">
+        <h3>Sustainable Infrastructure</h3>
+        <p><b>Objective:</b> Create modern, smart cities.</p>
+        <ul>
+          <li>Build efficient public transport systems.</li>
+          <li>Develop housing programs for affordable, high-quality homes.</li>
+          <li>Improve urban planning and green spaces.</li>
+        </ul>
+      </div>
+      <div class="vision-goal">
+        <h3>Environmental Protection</h3>
+        <p><b>Objective:</b> Safeguard natural resources for future generations.</p>
+        <ul>
+          <li>Launch green energy projects (solar, wind).</li>
+          <li>Reduce carbon emissions and pollution.</li>
+          <li>Conserve water and biodiversity.</li>
+        </ul>
+      </div>
+      <div class="vision-goal">
+        <h3>Government Efficiency & Digital Transformation</h3>
+        <p><b>Objective:</b> Make government more transparent, efficient, and tech-driven.</p>
+        <ul>
+          <li>Digitize public services and reduce bureaucracy.</li>
+          <li>Measure performance with key indicators.</li>
+          <li>Enhance accountability and fight corruption.</li>
+        </ul>
+      </div>
+      <div class="vision-goal">
+        <h3>National Identity and Culture</h3>
+        <p><b>Objective:</b> Preserve and promote Saudi cultural heritage.</p>
+        <ul>
+          <li>Restore historical sites.</li>
+          <li>Support artists and creatives.</li>
+          <li>Promote Saudi culture globally.</li>
+        </ul>
+      </div>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page3">
+      <h2>Vision Pillars</h2>
+      <p>Vision 2030 is built on three pillars:</p>
+      <ul>
+        <li>A Vibrant Society</li>
+        <li>A Thriving Economy</li>
+        <li>An Ambitious Nation</li>
+      </ul>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page4">
+      <h2>Vision Realization Programs</h2>
+      <p>Programs such as the National Transformation Program (NTP), Public Investment Fund Program, and Quality of Life Program are all enablers of Vision 2030's execution.</p>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page5">
+      <h2>Mega Projects</h2>
+      <p>Several innovative and sustainable projects have been launched, such as:</p>
+      <ul>
+        <li>NEOM</li>
+        <li>Qiddiya</li>
+        <li>The Red Sea Project</li>
+        <li>Roshn</li>
+        <li>New Murabba</li>
+      </ul>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page6">
+      <h2>Education in 2030</h2>
+      <p>Education reform includes focusing on coding, future skills, digital learning, and scientific research to empower the next generation.</p>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page7">
+      <h2>Sustainability</h2>
+      <p>Sustainability focuses on building a greener, more resilient Saudi Arabia by:</p>
+      <ul>
+        <li>Preserving natural resources and biodiversity</li>
+        <li>Reducing carbon emissions and combating climate change</li>
+        <li>Promoting renewable energy projects and clean technologies</li>
+        <li>Encouraging sustainable urban planning and green building standards</li>
+      </ul>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page8">
+      <h2>Healthcare</h2>
+      <p>Improving healthcare in Saudi Arabia through:</p>
+      <ul>
+        <li>Enhancing healthcare infrastructure and facilities</li>
+        <li>Investing in medical research and innovation</li>
+        <li>Focusing on preventive care and public health awareness</li>
+        <li>Expanding access to advanced medical technologies and services</li>
+      </ul>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page9">
+      <h2>Digital Transformation</h2>
+      <p>The digital transformation program aims to:</p>
+      <ul>
+        <li>Integrate AI and advanced technologies across sectors</li>
+        <li>Improve digital infrastructure and connectivity nationwide</li>
+        <li>Support entrepreneurship and innovation in the tech industry</li>
+        <li>Develop digital skills and empower the workforce</li>
+      </ul>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page10">
+      <h2>Culture and Entertainment</h2>
+      <p>Vision 2030 promotes cultural and entertainment growth by:</p>
+      <ul>
+        <li>Supporting local arts, music, and heritage</li>
+        <li>Hosting international events and festivals</li>
+        <li>Developing entertainment infrastructure</li>
+        <li>Encouraging tourism through cultural experiences</li>
+      </ul>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page11">
+      <h2>Renewable Energy</h2>
+      <p>Saudi Arabia aims to lead in renewable energy through:</p>
+      <ul>
+        <li>Expanding solar and wind energy projects</li>
+        <li>Reducing reliance on fossil fuels</li>
+        <li>Innovating in energy storage and smart grids</li>
+        <li>Encouraging public and private sector partnerships</li>
+      </ul>
+      <button class="continue-btn" onclick="nextPage()">Continue</button>
+    </div>
+
+    <div class="page" id="page12">
+      <h2>Quiz</h2>
+      <form id="quizForm">
+        <p><strong>What is the main goal of Saudi Vision 2030?</strong></p>
+        <label><input type="radio" name="vision" value="A"> A) Increasing oil prices</label><br>
+        <label><input type="radio" name="vision" value="B"> B) Diversifying sources of income</label><br>
+        <label><input type="radio" name="vision" value="C"> C) Reducing the population</label><br>
+        <label><input type="radio" name="vision" value="D"> D) Reducing government spending</label><br><br>
+        <button type="button" onclick="checkAnswer()" class="continue-btn">Submit</button>
+      </form>
+      <p id="quizFeedback" style="margin-top:15px; font-weight:bold;"></p>
+    </div>
+
+    <div class="page" id="page13">
+      <h2>Generation Systems Across Saudi Arabia</h2>
+      <div id="ksa-map"></div>
+    </div>
+
+  </div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
