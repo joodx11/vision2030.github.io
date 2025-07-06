@@ -13,8 +13,17 @@ function updateProgress() {
 
 // Enhanced page navigation with animations
 function showPage(num) {
+  // Pause all videos when navigating pages
+  document.querySelectorAll('video').forEach(v => v.pause());
+
   if(num < 1 || num > totalPages || isAnimating) return;
-  
+
+  // Pause intro video if leaving page 1
+  if (currentPage === 1 && num !== 1) {
+    const introVideo = document.querySelector('#page1 video');
+    if (introVideo) introVideo.pause();
+  }
+
   isAnimating = true;
   const currentPageElement = document.querySelector('.page.active');
   const targetPageElement = document.getElementById(`page${num}`);
@@ -260,15 +269,16 @@ function checkAnswer() {
 
   if (selected === 'B') {
     feedback.style.color = '#38d39f';
-    feedback.textContent = '✅ Correct! Saudi Vision 2030 aims to diversify sources of income and reduce dependence on oil revenues.';
+    feedback.textContent = 'Correct! Saudi Vision 2030 aims to diversify sources of income and reduce dependence on oil revenues.';
     feedback.style.animation = 'pulse 0.5s ease-in-out';
-    
     // Add confetti effect
     createConfetti();
+    document.getElementById('quizContinueBtn').style.display = 'inline-block';
   } else {
     feedback.style.color = '#ff6b6b'; 
     feedback.textContent = '❌ Incorrect. Please try again.';
     feedback.style.animation = 'shake 0.5s ease-in-out';
+    document.getElementById('quizContinueBtn').style.display = 'inline-block';
   }
 }
 

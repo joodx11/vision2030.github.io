@@ -43,7 +43,29 @@ body {
 }
 
 .sidebar.collapsed {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 60px;
+  background: transparent !important;
+  border-right: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  overflow: visible;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
+  z-index: 1001;
+}
+
+.sidebar.collapsed .sidebar-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
 }
 
 .sidebar-header {
@@ -232,7 +254,7 @@ body {
 }
 
 .main-content.expanded {
-  margin-left: 80px;
+  margin-left: 0 !important;
 }
 
 /* Page containers with advanced styling */
@@ -396,7 +418,7 @@ p {
 
 /* Enhanced quote section */
 .quote-section {
-  background: linear-gradient(135deg, rgba(20, 67, 56, 0.9) 0%, rgba(25, 85, 70, 0.9) 100%);
+  background: linear-gradient(135deg, rgba(20, 67, 56, 0.85) 0%, rgba(25, 85, 70, 0.85) 100%), url('king.jpeg') center/cover no-repeat;
   padding: 30px;
   border-radius: 16px;
   margin: 30px 0;
@@ -419,7 +441,7 @@ p {
 .quote-text {
   font-size: 20px;
   font-style: italic;
-  color: #a0f1d1;
+  color: #fff;
   text-align: center;
   margin: 0;
   line-height: 1.6;
@@ -428,7 +450,7 @@ p {
 
 .quote-source {
   text-align: center;
-  color: #7de6bf;
+  color: #FFD700;
   font-weight: bold;
   margin-top: 15px;
   font-size: 16px;
@@ -613,6 +635,15 @@ input[type="radio"] {
   }
 }
 
+@media (min-width: 769px) {
+  .main-content {
+    margin-left: 280px;
+  }
+  .sidebar.collapsed ~ .main-content {
+    margin-left: 0 !important;
+  }
+}
+
 /* Loading animation */
 .loading {
   display: inline-block;
@@ -666,4 +697,117 @@ input[type="radio"] {
 .fab i {
   color: #121618;
   font-size: 24px;
+} 
+
+.project-logos-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  justify-items: center;
+  align-items: center;
+  margin: 32px auto;
+  max-width: 700px;
+}
+
+@media (max-width: 900px) {
+  .project-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-logos-grid {
+    grid-template-columns: 1fr;
+    max-width: 180px;
+    gap: 20px;
+  }
+}
+
+.project-logos-grid a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  transition: none;
+  border: none;
+}
+.project-logo {
+  max-width: 120px;
+  max-height: 70px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(56, 211, 159, 0.15);
+  padding: 12px;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+  display: block;
+  border: 2px solid rgba(56, 211, 159, 0.7);
+}
+.project-logo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(56, 211, 159, 0.25);
+  border-color: #38d39f;
+}
+
+.project-logos-grid a div {
+  margin-top: 12px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+}
+.project-logos-grid a:visited div {
+  color: #fff;
+}
+
+.project-logo {
+  max-width: 120px;
+  max-height: 70px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(56, 211, 159, 0.15);
+  padding: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+}
+
+.project-logo:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 32px rgba(56, 211, 159, 0.25);
+} 
+
+.sidebar.collapsed .sidebar-header h2,
+.sidebar.collapsed .hide-btn,
+.sidebar.collapsed ul {
+  display: none !important;
+}
+
+.sidebar.collapsed .toggle-btn {
+  display: block !important;
+  margin: 16px auto 0 auto;
+  z-index: 10;
+} 
+
+.institution-logo {
+  width: 96px;
+  height: 96px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(56, 211, 159, 0.10);
+  padding: 12px;
 } 

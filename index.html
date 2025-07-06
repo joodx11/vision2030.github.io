@@ -18,7 +18,7 @@
   <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
       <div class="sidebar-header-buttons">
-        <button class="toggle-btn" onclick="toggleSidebar()" id="lockBtn" title="Toggle Menu">��</button>
+        <button class="toggle-btn" onclick="toggleSidebar()" id="lockBtn" title="Toggle Menu">🔒</button>
         <button class="hide-btn" onclick="toggleMenuItems()" id="hideBtn" title="Hide/Show Menu Items">Hide Others</button>
       </div>
       <h2>Course Menu</h2>
@@ -31,10 +31,8 @@
       <li><a onclick="showPage(5)">Mega Projects</a></li>
       <li><a onclick="showPage(6)">Education</a></li>
       <li><a onclick="showPage(7)">Sustainability</a></li>
-      <li><a onclick="showPage(8)">Healthcare</a></li>
       <li><a onclick="showPage(9)">Digital Transformation</a></li>
       <li><a onclick="showPage(10)">Culture and Entertainment</a></li>
-      <li><a onclick="showPage(11)">Renewable Energy</a></li>
       <li><a onclick="showPage(12)">Quiz</a></li>
       <li><a onclick="showPage(13)">Generation Systems Map</a></li>
     </ul>
@@ -47,10 +45,13 @@
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
       <div class="quote-section">
         <p class="quote-text">❝ My primary goal is to be an exemplary and leading nation in all aspects, and I will work with you in achieving this endeavour. ❞</p>
-        <p class="quote-source">— Custodian of the Two Holy Mosques, King Salman Bin Abdulaziz Al-Saud</p>
+        <p class="quote-source">— King Salman Bin Abdulaziz Al-Saud</p>
       </div>
       <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/zzHuWw7mu0c?autoplay=1" allow="autoplay" allowfullscreen></iframe>
+        <video controls autoplay muted poster="pic2.png" style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.4);">
+          <source src="5 years of Saudi Vision 2030.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <button class="continue-btn" onclick="nextPage()">Continue</button>
     </div>
@@ -58,68 +59,25 @@
     <div class="page" id="page2">
       <h2>Vision 2030 Goals</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Saudi Arabia's Vision 2030 outlines a strategic roadmap to transform the Kingdom into a global model of excellence. The goals are divided into social, economic, and governmental priorities, each supporting national development and long-term sustainability.</p>
       <div class="vision-goal">
-        <h3>Economic Diversification</h3>
-        <p><b>Objective:</b> Reduce dependence on oil revenues.</p>
+        <h3>1. Economic Growth</h3>
         <ul>
-          <li>Develop non-oil sectors such as tourism, entertainment, mining, manufacturing, and logistics.</li>
-          <li>Invest in renewable energy and technology.</li>
-          <li>Encourage private sector growth and entrepreneurship.</li>
+          <li>Develop non-oil sectors like tourism and logistics</li>
+          <li>Invest in renewable energy and technology</li>
         </ul>
       </div>
       <div class="vision-goal">
-        <h3>Empowering Citizens</h3>
-        <p><b>Objective:</b> Build a productive and inclusive society.</p>
+        <h3>2. Empowering Citizens</h3>
         <ul>
-          <li>Increase women's participation in the workforce and leadership roles.</li>
-          <li>Expand training programs and scholarships for youth.</li>
-          <li>Promote volunteering and social responsibility.</li>
+          <li>Increase women’s participation and youth training</li>
+          <li>Promote volunteering and social responsibility</li>
         </ul>
       </div>
       <div class="vision-goal">
-        <h3>Enhancing Quality of Life</h3>
-        <p><b>Objective:</b> Make Saudi Arabia one of the best places to live.</p>
+        <h3>3. Enhancing Quality of Life</h3>
         <ul>
-          <li>Improve public health services and facilities.</li>
-          <li>Upgrade education systems with modern technology and curricula.</li>
-          <li>Expand cultural, recreational, and sports programs.</li>
-        </ul>
-      </div>
-      <div class="vision-goal">
-        <h3>Sustainable Infrastructure</h3>
-        <p><b>Objective:</b> Create modern, smart cities.</p>
-        <ul>
-          <li>Build efficient public transport systems.</li>
-          <li>Develop housing programs for affordable, high-quality homes.</li>
-          <li>Improve urban planning and green spaces.</li>
-        </ul>
-      </div>
-      <div class="vision-goal">
-        <h3>Environmental Protection</h3>
-        <p><b>Objective:</b> Safeguard natural resources for future generations.</p>
-        <ul>
-          <li>Launch green energy projects (solar, wind).</li>
-          <li>Reduce carbon emissions and pollution.</li>
-          <li>Conserve water and biodiversity.</li>
-        </ul>
-      </div>
-      <div class="vision-goal">
-        <h3>Government Efficiency & Digital Transformation</h3>
-        <p><b>Objective:</b> Make government more transparent, efficient, and tech-driven.</p>
-        <ul>
-          <li>Digitize public services and reduce bureaucracy.</li>
-          <li>Measure performance with key indicators.</li>
-          <li>Enhance accountability and fight corruption.</li>
-        </ul>
-      </div>
-      <div class="vision-goal">
-        <h3>National Identity and Culture</h3>
-        <p><b>Objective:</b> Preserve and promote Saudi cultural heritage.</p>
-        <ul>
-          <li>Restore historical sites.</li>
-          <li>Support artists and creatives.</li>
-          <li>Promote Saudi culture globally.</li>
+          <li>Improve healthcare and education</li>
+          <li>Expand access to culture and sports</li>
         </ul>
       </div>
       <button class="continue-btn" onclick="nextPage()">Continue</button>
@@ -128,74 +86,60 @@
     <div class="page" id="page3">
       <h2>Vision Pillars</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Saudi Arabia's Vision 2030 is built upon three core pillars that shape the Kingdom's aspirations for a thriving future. Each pillar represents a strategic priority to drive transformation and ensure long-term sustainability and prosperity.</p>
-      
       <div class="vision-goal">
         <h3>1. A Vibrant Society</h3>
-        <p>We are creating a society with strong roots, rich traditions, and a thriving culture. By enhancing quality of life, promoting cultural heritage, and encouraging sports and entertainment, we aim to foster community engagement and national pride.</p>
         <ul>
-          <li>Preserving Islamic and national values</li>
-          <li>Promoting cultural and recreational activities</li>
-          <li>Ensuring healthy and fulfilling lives</li>
+          <li>Preserve Islamic and national values</li>
+          <li>Promote culture, sports, and entertainment</li>
+          <li>Enhance quality of life and public health</li>
         </ul>
       </div>
-
       <div class="vision-goal">
         <h3>2. A Thriving Economy</h3>
-        <p>Empowering citizens, diversifying the economy, and investing in innovation are central to building a strong and sustainable economy. Vision 2030 opens new doors for business, entrepreneurship, and job creation.</p>
         <ul>
-          <li>Supporting local industries and SMEs</li>
-          <li>Attracting foreign investment</li>
-          <li>Advancing education and skills for the future</li>
+          <li>Diversify economy beyond oil</li>
+          <li>Support SMEs and attract investment</li>
+          <li>Develop education and future skills</li>
         </ul>
       </div>
-
       <div class="vision-goal">
         <h3>3. An Ambitious Nation</h3>
-        <p>We strive to build a transparent, accountable, and effective government that serves its people with integrity. Through digital transformation and public sector efficiency, we are setting new standards for governance and performance.</p>
         <ul>
-          <li>Enhancing government effectiveness</li>
-          <li>Fostering social responsibility</li>
-          <li>Promoting fiscal sustainability</li>
+          <li>Improve government efficiency and transparency</li>
+          <li>Promote social responsibility</li>
+          <li>Ensure fiscal sustainability</li>
         </ul>
       </div>
-      
       <button class="continue-btn" onclick="nextPage()">Continue</button>
     </div>
 
     <div class="page" id="page4">
-      <h2>Vision Realization Programs</h2>
+      <h2>Vision Realization Programs (VRPs)</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Vision Realization Programs (VRPs) are specialized initiatives launched to translate Vision 2030's goals into actionable plans. Each program addresses specific national priorities and is led by government entities.</p>
-      
       <div class="vision-goal">
         <h3>Key Programs:</h3>
         <ul>
-          <li><strong>National Industrial Development and Logistics Program (NIDLP):</strong> Enhances Saudi Arabia's position as a global industrial and logistics hub.</li>
-          <li><strong>Quality of Life Program:</strong> Improves the living standards by expanding cultural, sports, and recreational activities.</li>
-          <li><strong>Fiscal Balance Program:</strong> Ensures sustainable public finances and spending efficiency.</li>
-          <li><strong>Human Capability Development Program:</strong> Focuses on education reform and skills for the future.</li>
-          <li><strong>Digital Government Authority (DGA):</strong> Accelerates digital transformation across the public sector.</li>
+          <li>National Industrial Development and Logistics Program (NIDLP)</li>
+          <li>Quality of Life Program</li>
+          <li>Fiscal Balance Program</li>
+          <li>Human Capability Development Program</li>
+          <li>Digital Government Authority (DGA)</li>
         </ul>
       </div>
-      
       <button class="continue-btn" onclick="nextPage()">Continue</button>
     </div>
 
     <div class="page" id="page5">
       <h2>Mega Projects</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Saudi Arabia is launching unprecedented mega-projects that redefine urban living, tourism, and sustainability.</p>
-      
       <div class="vision-goal">
         <h3>Key Projects:</h3>
-        <ul>
-          <li><a href="https://www.neom.com/" target="_blank" rel="noopener"><strong>NEOM:</strong> A $500 billion futuristic city powered by renewable energy and AI.</a></li>
-          <li><a href="https://www.redseaglobal.com/en" target="_blank" rel="noopener"><strong>The Red Sea Project:</strong> A luxury tourism destination along Saudi's pristine western coastline.</a></li>
-          <li><a href="https://www.qiddiya.com/" target="_blank" rel="noopener"><strong>Qiddiya:</strong> The Kingdom's capital of entertainment, sports, and culture.</a></li>
-          <li><a href="https://www.diriyah.sa/" target="_blank" rel="noopener"><strong>Diriyah Gate:</strong> A heritage-focused project reviving the birthplace of the Kingdom.</a></li>
-          <li><a href="https://www.kingsalmanpark.sa/" target="_blank" rel="noopener"><strong>King Salman Park:</strong> The largest urban park in the world, located in Riyadh.</a></li>
-        </ul>
+        <div class="project-logos-grid">
+          <a href="https://www.neom.com/" target="_blank" title="NEOM"><img src="neom.png" alt="NEOM Logo" class="project-logo"></a>
+          <a href="https://www.redseaglobal.com/en" target="_blank" title="Red Sea Project"><img src="redsea.png" alt="Red Sea Project Logo" class="project-logo"></a>
+          <a href="https://www.qiddiya.com/" target="_blank" title="Qiddiya"><img src="qiddiya.png" alt="Qiddiya Logo" class="project-logo"></a>
+          <a href="https://www.diriyah.sa/" target="_blank" title="Diriyah Gate"><img src="diriyah.png" alt="Diriyah Gate Logo" class="project-logo"></a>
+        </div>
       </div>
       
       <button class="continue-btn" onclick="nextPage()">Continue</button>
@@ -204,19 +148,13 @@
     <div class="page" id="page6">
       <h2>Education in 2030</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Vision 2030 aims to transform the education sector into a globally competitive system that prepares students for future careers.</p>
-      
-      <div class="vision-goal">
-        <h3>Focus Areas:</h3>
-        <ul>
-          <li>Revamping school curricula to emphasize innovation, critical thinking, and STEM</li>
-          <li>Encouraging partnerships with international universities</li>
-          <li>Expanding vocational and technical training</li>
-          <li>Increasing private sector involvement in education</li>
-          <li>Promoting lifelong learning and digital learning platforms</li>
-        </ul>
+      <p>Vision 2030 seeks to build a globally competitive education system that equips students for future careers.</p>
+      <div class="video-container">
+        <video controls autoplay muted style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.4);">
+          <source src="Saudi Vision 2030's Gaols_ EDUCATION.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
-      
       <button class="continue-btn" onclick="nextPage()">Continue</button>
     </div>
 
@@ -224,34 +162,20 @@
       <h2>Sustainability</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
       <p>Environmental protection and resource sustainability are at the core of Vision 2030's long-term plans.</p>
-      
-      <div class="vision-goal">
-        <h3>Key Initiatives:</h3>
-        <ul>
-          <li><strong>The Saudi Green Initiative:</strong> Aims to plant 10 billion trees, reduce carbon emissions, and increase protected areas</li>
-          <li>Water desalination and conservation programs</li>
-          <li>Waste management and recycling projects</li>
-          <li>Sustainable urban planning</li>
-          <li>Circular carbon economy model implementation</li>
-        </ul>
+      <div class="video-container">
+        <video controls autoplay muted style="width:100%;height:auto;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.4);">
+          <source src="Protect our environment. Protect our present. Protect our future. _ Sustainable Saudi Vision.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
-      
-      <button class="continue-btn" onclick="nextPage()">Continue</button>
-    </div>
-
-    <div class="page" id="page8">
-      <h2>Healthcare</h2>
-      <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Vision 2030 seeks to ensure comprehensive and accessible healthcare for all residents through modernization and efficiency.</p>
-      
       <div class="vision-goal">
-        <h3>Key Strategies:</h3>
+        <h3>Key Initiatives</h3>
         <ul>
-          <li>Enhancing healthcare infrastructure and digital health services</li>
-          <li>Promoting preventive care and disease control</li>
-          <li>Encouraging private investment in healthcare</li>
-          <li>Introducing value-based care models</li>
-          <li>Expanding health insurance coverage</li>
+          <li>Saudi Green Initiative</li>
+          <li>Water desalination and conservation</li>
+          <li>Waste management and recycling</li>
+          <li>Sustainable urban planning</li>
+          <li>Circular carbon economy model</li>
         </ul>
       </div>
       
@@ -261,7 +185,6 @@
     <div class="page" id="page9">
       <h2>Digital Transformation</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Digital innovation is a critical enabler of Vision 2030, driving government efficiency and economic growth.</p>
       
       <div class="vision-goal">
         <h3>Key Highlights:</h3>
@@ -276,10 +199,20 @@
       
       <div class="vision-goal">
         <h3>Key Institutions:</h3>
-        <ul>
-          <li><strong>SDAIA (Saudi Data and AI Authority)</strong> – <a href="https://sdaia.gov.sa" target="_blank">https://sdaia.gov.sa</a></li>
-          <li><strong>Digital Government Authority</strong> – <a href="https://dga.gov.sa" target="_blank">https://dga.gov.sa</a></li>
-        </ul>
+        <div class="project-logos-grid">
+          <a href="https://sdaia.gov.sa" target="_blank" title="SDAIA">
+            <img src="SDAIA.png" alt="SDAIA Logo" class="project-logo institution-logo">
+          </a>
+          <a href="https://dga.gov.sa" target="_blank" title="Digital Government Authority">
+            <img src="Digital Government Authority.png" alt="Digital Government Authority Logo" class="project-logo institution-logo">
+          </a>
+          <a href="https://elm.sa/ar/Pages/default.aspx" target="_blank" title="ELM">
+            <img src="ELM.png" alt="ELM Logo" class="project-logo institution-logo">
+          </a>
+          <a href="https://my.gov.sa/ar" target="_blank" title="Saudi Government Portal">
+            <img src="gov.sa.png" alt="Saudi Government Portal Logo" class="project-logo institution-logo">
+          </a>
+        </div>
       </div>
       
       <button class="continue-btn" onclick="nextPage()">Continue</button>
@@ -288,49 +221,27 @@
     <div class="page" id="page10">
       <h2>Culture and Entertainment</h2>
       <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Vision 2030 revives and celebrates Saudi Arabia's rich culture while creating a thriving entertainment industry.</p>
-      
       <div class="vision-goal">
         <h3>Major Areas of Development:</h3>
         <ul>
-          <li>Opening cinemas and theaters across the Kingdom</li>
-          <li>Hosting global concerts, sports events, and festivals</li>
-          <li>Supporting Saudi artists, musicians, and filmmakers</li>
-          <li>Launching cultural exchange programs</li>
-          <li>Establishing museums, galleries, and heritage sites</li>
+          <li>New cinemas and theaters</li>
+          <li>Global concerts and sports events</li>
+          <li>Support for Saudi artists and filmmakers</li>
+          <li>Cultural exchange programs</li>
+          <li>New museums and heritage sites</li>
         </ul>
       </div>
       
       <div class="vision-goal">
         <h3>Entities Leading the Vision:</h3>
-        <ul>
-          <li><strong>General Entertainment Authority</strong> – <a href="https://www.gea.gov.sa" target="_blank">https://www.gea.gov.sa</a></li>
-          <li><strong>Ministry of Culture</strong> – <a href="https://www.moc.gov.sa/en" target="_blank">https://www.moc.gov.sa/en</a></li>
-        </ul>
-      </div>
-      
-      <button class="continue-btn" onclick="nextPage()">Continue</button>
-    </div>
-
-    <div class="page" id="page11">
-      <h2>Renewable Energy</h2>
-      <img src="pic2.png" class="vision-logo" alt="Saudi Vision 2030 Logo" />
-      <p>Saudi Arabia is shifting from an oil-based economy to a diversified energy portfolio that includes renewables.</p>
-      
-      <div class="vision-goal">
-        <h3>Key Projects:</h3>
-        <ul>
-          <li>Sakaka PV Solar Plant and other solar initiatives</li>
-          <li>Dumat Al Jandal Wind Farm</li>
-          <li>National Renewable Energy Program (NREP)</li>
-          <li>Hydrogen fuel and green energy research</li>
-          <li>Targeting 50% renewable energy in power generation by 2030</li>
-        </ul>
-      </div>
-      
-      <div class="vision-goal">
-        <h3>Leading Authority:</h3>
-        <p><strong>Ministry of Energy</strong> – <a href="https://www.moenergy.gov.sa" target="_blank">https://www.moenergy.gov.sa</a></p>
+        <div class="project-logos-grid">
+          <a href="https://www.gea.gov.sa" target="_blank" title="General Entertainment Authority">
+            <img src="gea.png" alt="General Entertainment Authority Logo" class="project-logo">
+          </a>
+          <a href="https://www.moc.gov.sa/en" target="_blank" title="Ministry of Culture">
+            <img src="gov.jpeg" alt="Ministry of Culture Logo" class="project-logo institution-logo">
+          </a>
+        </div>
       </div>
       
       <button class="continue-btn" onclick="nextPage()">Continue</button>
@@ -348,6 +259,7 @@
         <button type="button" onclick="checkAnswer()" class="continue-btn">Submit</button>
       </form>
       <p id="quizFeedback" style="margin-top:15px; font-weight:bold;"></p>
+      <button id="quizContinueBtn" class="continue-btn" style="display:none" onclick="nextPage()">Continue</button>
     </div>
 
     <div class="page" id="page13">
