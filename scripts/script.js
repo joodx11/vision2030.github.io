@@ -356,6 +356,18 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Add event listener to all Vision 2030 logos to go to intro page
+window.addEventListener('DOMContentLoaded', function() {
+  var logos = document.querySelectorAll('.vision-logo');
+  logos.forEach(function(logo) {
+    logo.style.cursor = 'pointer';
+    logo.title = 'Go to Introduction';
+    logo.addEventListener('click', function() {
+      showPage(1);
+    });
+  });
+});
+
 // Add CSS animations
 const style = document.createElement('style');
 style.textContent = `
